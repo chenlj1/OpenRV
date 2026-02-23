@@ -56,9 +56,6 @@
             <property name="arrowType">
              <enum>Qt::NoArrow</enum>
             </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">solo</string>
-            </property>
            </widget>
           </item>
           <item>
@@ -84,9 +81,6 @@
             </property>
             <property name="arrowType">
              <enum>Qt::NoArrow</enum>
-            </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">solo</string>
             </property>
            </widget>
           </item>
@@ -117,18 +111,12 @@
             <property name="text">
              <string>...</string>
             </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">left_menu</string>
-            </property>
            </widget>
           </item>
           <item>
            <widget class="QToolButton" name="folderButton">
             <property name="text">
              <string>...</string>
-            </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">interior_menu</string>
             </property>
            </widget>
           </item>
@@ -137,9 +125,6 @@
             <property name="text">
              <string>...</string>
             </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">interior</string>
-            </property>
            </widget>
           </item>
           <item>
@@ -147,18 +132,12 @@
             <property name="text">
              <string>...</string>
             </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">interior</string>
-            </property>
            </widget>
           </item>
           <item>
            <widget class="QToolButton" name="selectCurrentButton">
             <property name="text">
              <string>...</string>
-            </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">right</string>
             </property>
            </widget>
           </item>
@@ -195,9 +174,6 @@
             </property>
             <property name="popupMode">
              <enum>QToolButton::DelayedPopup</enum>
-            </property>
-            <property name="tbstyle" stdset="0">
-             <string notr="true">solo_menu</string>
             </property>
            </widget>
           </item>
@@ -253,18 +229,12 @@
                 <property name="text">
                  <string>...</string>
                 </property>
-                <property name="tbstyle" stdset="0">
-                 <string notr="true">solo</string>
-                </property>
                </widget>
               </item>
               <item>
                <widget class="QToolButton" name="orderDownButton">
                 <property name="text">
                  <string>...</string>
-                </property>
-                <property name="tbstyle" stdset="0">
-                 <string notr="true">solo</string>
                 </property>
                </widget>
               </item>
@@ -284,14 +254,14 @@
               <item>
                <widget class="QToolButton" name="sortAscButton">
                 <property name="text">
-                 <string>A-Z</string>
+                 <string>...</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QToolButton" name="sortDescButton">
                 <property name="text">
-                 <string>Z-A</string>
+                 <string>...</string>
                 </property>
                </widget>
               </item>
@@ -312,9 +282,6 @@
                <widget class="QToolButton" name="inputsDeleteButton">
                 <property name="text">
                  <string>...</string>
-                </property>
-                <property name="tbstyle" stdset="0">
-                 <string notr="true">solo</string>
                 </property>
                </widget>
               </item>

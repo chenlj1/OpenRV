@@ -1,7 +1,7 @@
 package: Session Manager
 author: Autodesk, Inc.
 organization: Autodesk, Inc.
-version: 1.9
+version: 2.0
 rv: 3.12.15
 openrv: 1.0.0
 requires: ''
@@ -9,33 +9,33 @@ system: true
 hidden: true
 
 modes: 
-  - file: session_manager
+  - file: session_manager.py
     menu: Tools/Session Manager
     shortcut: 'x' 
     event: 'key-down--x'
     load: delay
-  - file: StackGroup_edit_mode
-    load: delay
-  - file: SwitchGroup_edit_mode
-    load: delay
-  - file: FolderGroup_edit_mode
-    load: delay
-  - file: Stack_edit_mode
-    load: delay
-  - file: Switch_edit_mode
-    load: delay
-  - file: Composite_edit_mode
-    load: delay
-  - file: SequenceGroup_edit_mode
-    load: delay
-  - file: SourceGroup_edit_mode
-    load: delay
-  - file: LayoutGroup_edit_mode
-    load: delay
-  - file: RetimeGroup_edit_mode
-    load: delay
-  - file: transform_manip
-    load: delay
+  - file: StackGroup_edit_mode.py
+    load: immediate
+  - file: SwitchGroup_edit_mode.py
+    load: immediate
+  - file: FolderGroup_edit_mode.py
+    load: immediate
+  - file: Stack_edit_mode.py
+    load: immediate
+  - file: Switch_edit_mode.py
+    load: immediate
+  - file: Composite_edit_mode.py
+    load: immediate
+  - file: SequenceGroup_edit_mode.py
+    load: immediate
+  - file: SourceGroup_edit_mode.py
+    load: immediate
+  - file: LayoutGroup_edit_mode.py
+    load: immediate
+  - file: RetimeGroup_edit_mode.py
+    load: immediate
+  - file: transform_manip.py
+    load: immediate
 
 description: |
 
