@@ -55,20 +55,6 @@ except ImportError:
         QMenu, QDialog, QColorDialog,
         QAbstractItemView, QApplication
     )
-    from PySide2.QtUiTools import QUiLoader
-except ImportError:
-    from PySide6.QtCore import Qt, QSize, QPoint, QUrl, QFile, QTimer, QModelIndex, QItemSelectionModel
-    from PySide6.QtGui import (
-        QStandardItemModel, QStandardItem, QIcon, QPixmap, QImage,
-        QColor, QBrush, QPalette, QAction, QActionGroup, QPainter
-    )
-    from PySide6.QtWidgets import (
-        QWidget, QDockWidget, QTreeView, QListView, QSplitter,
-        QVBoxLayout, QToolButton, QTabWidget, QTreeWidget, QTreeWidgetItem,
-        QLabel, QLineEdit, QGroupBox, QPushButton, QComboBox,
-        QMenu, QDialog, QColorDialog,
-        QAbstractItemView, QApplication
-    )
     from PySide6.QtUiTools import QUiLoader
 
 from rv import qtutils
