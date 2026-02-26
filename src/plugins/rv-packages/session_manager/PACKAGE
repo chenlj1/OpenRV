@@ -15,27 +15,27 @@ modes:
     event: 'key-down--x'
     load: delay
   - file: StackGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: SwitchGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: FolderGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: Stack_edit_mode.py
-    load: immediate
+    load: delay
   - file: Switch_edit_mode.py
-    load: immediate
+    load: delay
   - file: Composite_edit_mode.py
-    load: immediate
+    load: delay
   - file: SequenceGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: SourceGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: LayoutGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: RetimeGroup_edit_mode.py
-    load: immediate
+    load: delay
   - file: transform_manip.py
-    load: immediate
+    load: delay
 
 description: |
 
