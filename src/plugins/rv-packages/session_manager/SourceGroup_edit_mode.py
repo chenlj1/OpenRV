@@ -49,12 +49,18 @@ class SourceGroupEditMode(rvtypes.MinorMode):
             ],
             [
                 ("Source", [
-                    ("Clear Source Cut In/Out", self.resetCut, None, None),
+                    ("Set Source Cut In ...", self.setCutInMode, None, self.sourceMenuState),
+                    ("Set Source Cut Out ...", self.setCutOutMode, None, self.sourceMenuState),
+                    ("Clear Source Cut In/Out", self.resetCut, None, self.sourceMenuState),
                     ("Sync GUI With Source Cut In/Out", self.toggleSync, None, self.syncState),
                 ])
             ],
             None
         )
+
+    def sourceMenuState(self):
+        """Return neutral state for Source menu items (matches Mu sourceMenuState)."""
+        return commands.NeutralMenuState
 
     def syncGuiInOut(self):
         """Check if GUI sync is enabled."""
@@ -123,6 +129,14 @@ class SourceGroupEditMode(rvtypes.MinorMode):
             pass
         finally:
             self._locked = False
+
+    def setCutInMode(self, event):
+        """Stub: Mu uses startTextEntryMode (no Python API). Use Source UI cut fields."""
+        event.reject()
+
+    def setCutOutMode(self, event):
+        """Stub: Mu uses startTextEntryMode (no Python API). Use Source UI cut fields."""
+        event.reject()
 
     def resetSlot(self, checked):
         self.reset()

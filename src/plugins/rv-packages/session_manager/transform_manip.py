@@ -27,21 +27,15 @@ except ImportError:
     glyph = _GlyphStub()
 
 
-# PySide2/PySide6 compatibility
+# PySide2/PySide6 compatibility: setCursor() expects an int; PySide2 uses int enums, PySide6 uses enum with .value
 try:
     from PySide2.QtCore import Qt
-    # PySide2 enums are integers
     def cursor_value(cursor):
-        return cursor
+        return int(cursor) if cursor is not None else 0
 except ImportError:
     from PySide6.QtCore import Qt
-    # PySide6 enums need .value
     def cursor_value(cursor):
-        return cursor.value
-
-def cursor_value(cursor):
-    """Get integer value from cursor enum for commands.setCursor()."""
-    return cursor.value
+        return cursor.value if cursor is not None else 0
 
 from OpenGL.GL import *
 from OpenGL.GLU import *

@@ -882,6 +882,7 @@ class SessionManagerMode(rvtypes.MinorMode):
                 ("key-down--@", self.showRows, "show'em"),
                 ("before-session-deletion", self.enterQuittingState, "Store quitting"),
                 ("view-edit-mode-activated", self.viewEditModeActivated, "Per-view edit mode"),
+                ("internal-sync-presenter-changed", self.onPresenterChanged, "Live Review presenter changed"),
             ],
             None,
             None
@@ -1361,6 +1362,12 @@ class SessionManagerMode(rvtypes.MinorMode):
         """Handle view-edit-mode-activated event."""
         event.reject()
         commands.sendInternalEvent("session-manager-load-ui", commands.viewNode())
+
+    def onPresenterChanged(self, event):
+        """Close session manager when Live Review presenter changes."""
+        if self._active and self._dockWidget and self._dockWidget.isVisible():
+            self.toggle()
+        event.reject()
 
     def updateTreeEvent(self, event):
         """Handle events that require tree update."""

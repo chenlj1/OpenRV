@@ -19,7 +19,7 @@ class StackGroupEditMode(rvtypes.MinorMode):
             "StackGroup_edit_mode",
             None,
             [("graph-state-change", self.propertyChanged, "Maybe update session UI")],
-            None,
+            [("Stack", [])],  # Empty submenu for UI parity with Mu
             None
         )
 

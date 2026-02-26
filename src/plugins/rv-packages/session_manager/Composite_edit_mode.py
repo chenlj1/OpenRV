@@ -46,6 +46,7 @@ class CompositeEditMode(rvtypes.MinorMode):
                     ("Composite Operation", None, None, self.inactiveState),
                     ("   Over", self.setOpEvent(0), None, self.opState("over")),
                     ("   Add", self.setOpEvent(1), None, self.opState("add")),
+                    ("   Dissolve", self.setOpEvent(2), None, self.opState("dissolve")),
                     ("   Difference", self.setOpEvent(2), None, self.opState("difference")),
                     ("   Inverted Difference", self.setOpEvent(3), None, self.opState("-difference")),
                     ("   Replace", self.setOpEvent(4), None, self.opState("replace")),
@@ -75,7 +76,7 @@ class CompositeEditMode(rvtypes.MinorMode):
         commands.sendInternalEvent("cycle-stack-backward")
 
     def setOp(self, index):
-        """Set composite operation based on index."""
+        """Set composite operation (matches Mu: indices 0-5 = over, add, difference, -difference, replace, topmost). Dissolve maps to difference."""
         name = "over"
         if index == 0:
             name = "over"
@@ -122,7 +123,7 @@ class CompositeEditMode(rvtypes.MinorMode):
                     index = 0
                 elif op == "add":
                     index = 1
-                elif op == "difference":
+                elif op in ("difference", "dissolve"):
                     index = 2
                 elif op == "-difference":
                     index = 3
@@ -133,7 +134,7 @@ class CompositeEditMode(rvtypes.MinorMode):
                 else:
                     index = 6
                 if self._comboBox:
-                    self._comboBox.setCurrentIndex(index)
+                    self._comboBox.setCurrentIndex(min(index, 5))
         except Exception:
             pass
 
